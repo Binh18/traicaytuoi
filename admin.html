@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Trị - Trái Cây Tươi</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">🍏 Trái Cây Tươi</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="products.html">Sản phẩm</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-bold" href="admin.html">Quản trị</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center text-success fw-bold">Trang Quản Trị</h1>
+        <div class="row mt-4">
+            <div class="col-md-3">
+                <ul class="list-group shadow">
+                    <li class="list-group-item"><a href="#product-management">📦 Quản lý sản phẩm</a></li>
+                    <li class="list-group-item"><a href="#user-management">👥 Quản lý người dùng</a></li>
+                </ul>
+            </div>
+            <div class="col-md-9">
+                <div id="product-management" class="p-4 bg-light shadow rounded mb-4">
+                    <h3 class="text-success">📦 Quản lý sản phẩm</h3>
+                    <form id="add-product-form">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Tên sản phẩm</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="price" class="form-label">Giá</label>
+                            <input type="number" id="price" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="image" class="form-label">Hình ảnh</label>
+                            <input type="text" id="image" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-success">Thêm sản phẩm</button>
+                    </form>
+                    <table class="table mt-3">
+                        <thead>
+                            <tr>
+                                <th>Tên</th>
+                                <th>Giá</th>
+                                <th>Hình ảnh</th>
+                                <th>Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody id="product-list"></tbody>
+                    </table>
+                </div>
+
+                <div id="user-management" class="p-4 bg-light shadow rounded">
+                    <h3 class="text-success">👥 Quản lý người dùng</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Tên đăng nhập</th>
+                                <th>Quyền</th>
+                                <th>Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody id="user-list"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center p-4 mt-5 bg-success text-white shadow-lg">
+        &copy; 2025 Trái Cây Tươi. All Rights Reserved.
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

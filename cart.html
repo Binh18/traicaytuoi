@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng - Trái Cây Tươi</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+        <div class="container">
+            <a class="navbar-brand text-white fw-bold" href="index.html">🍏 Trái Cây Tươi</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="products.html">Sản phẩm</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="cart.html">Giỏ hàng</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="login.html">Đăng nhập</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center fw-bold">🛒 Giỏ hàng của bạn</h1>
+        <div class="table-responsive">
+            <table class="table table-bordered text-center">
+                <thead class="table-success">
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Tổng</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                </tbody>
+            </table>
+        </div>
+        <div class="d-flex justify-content-between align-items-center mt-4">
+            <a href="products.html" class="btn btn-outline-success">⬅ Tiếp tục mua hàng</a>
+            <h4 class="fw-bold">Tổng cộng: <span id="total-price">0</span>đ</h4>
+            <button class="btn btn-success" id="checkout">Thanh toán</button>
+        </div>
+    </div>
+
+    <footer class="text-center p-4 mt-5 bg-success text-white">
+        &copy; 2025 Trái Cây Tươi. All Rights Reserved.
+    </footer>
+</body>
+</html>
